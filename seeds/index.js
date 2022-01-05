@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const seedPostcards = require('./postcardData');
+const seedPostcards = require('./postData');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });

@@ -1,6 +1,8 @@
 const express = require('express');
 const { engine } = require('express-handlebars');
+const { json } = require('express/lib/response');
 const hbs = require("hbs");
+const Postcards = require('./models/Postcards');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -20,37 +22,14 @@ app.use("/login", function(request, response){
   response.render("login");
 });
 
-app.use("/", function(request, response){
-  response.render("main", {
-    news: [
-      {
-        title: 'test',
-        autor: 'test',
-        exhibition_date: '01.01.2022',
-        description: 'description test1',
-      }, 
-      {
-        title: "test2",
-        description: "description test2"
-      },
-      {
-        title: "test",
-        description: "description test"
-      }, 
-      {
-        title: "test2",
-        description: "description test2"
-      },
-      {
-        title: "test",
-        description: "description test"
-      }, 
-      {
-        title: "test2",
-        description: "description test2"
-      }
-    ]
-  });
+app.use("/", async function(request, response){
+  const data = await Postcards.findAll({});
+  //console.log(data[0]);
+  // const dataJson = response.json(data);
+  // console.log(dataJson)
+  // response.render("main", {
+  //   news: dataJson
+  // });
 });
 
 app.listen(PORT, () => console.log(`Server listening on: http://localhost:${PORT}`));

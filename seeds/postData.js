@@ -1,11 +1,11 @@
-const { Postcards } = require('../models');
+const  Postcards  = require('../models/Postcards');
 
 const postcardData = [
   {
-    title: '',
-    autor: '',
-    exhibition_date: '',
-    description: '',
+    title: 'test',
+    autor: 'test',
+    exhibition_date: '01.01.2022',
+    description: 'khjgfdxfjhkgjfdcvjhgfdcvhgjfd',
   },
 ];
 
