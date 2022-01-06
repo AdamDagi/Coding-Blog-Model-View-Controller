@@ -1,9 +1,11 @@
 <section class="section-content">
     {{#each news}}
         <div class="post-card-conteiner"> 
-            <div class="post-card-title">{{title}}</div>
-            <div class="post-card-autor">{{autor}}</div>
-            <div class="post-card-exhibition_date">{{exhibition_date}}</div>
+            <div class="post-card-header">
+                <div class="post-card-title">{{title}}</div>
+                <div class="post-card-autor">{{autor}}</div>
+                <div class="post-card-exhibition_date">{{exhibition_date}}</div>
+            </div>
             <div class="post-card-description">{{description}}</div>
         </div>
     {{/each}}

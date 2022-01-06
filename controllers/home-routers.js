@@ -6,22 +6,12 @@ const withAuth = require('../utils/auth');
 // GET all Postcards for homepage
 router.get('/', async (req, res) => {
   try {
-    const dbPostcardsData = await Postcards.findAll({
-      include: [
-        {
-          model: Coments,
-          attributes: ['autor', 'exhibition_date', 'message'],
-        },
-      ],
-    });
-
-    const poscard = dbPostcardsData.map((poscards) =>
-    poscards.get({ plain: true })
-    );
-
-    res.render('Home', {
-      poscard,
-      loggedIn: req.session.loggedIn,
+    Postcards.findAll({
+      raw: true
+    }).then(news => {
+      res.render("main", {
+        news
+      });
     });
   } catch (err) {
     console.log(err);
