@@ -110,7 +110,7 @@ align-items: center;
 /*****End MAIN.hbs*****/
 
 /*****LOGIN.hbs*****/
-.login-conteiner {
+.login-card {
     display: flex;
     align-items: center;
     margin: 30px;
@@ -123,7 +123,7 @@ align-items: center;
     background-color: rgb(115, 133, 145);
 }
 
-.input {
+.form-input {
     margin: 5px;
     border-radius: 5px;
     border: 1px solid rgb(71, 128, 162);
@@ -132,7 +132,7 @@ align-items: center;
     font-size: 15px;
 }
 
-.button {
+.login-button {
     margin: 5px;
     margin-top: 20px;
     border-radius: 25px;
@@ -141,5 +141,75 @@ align-items: center;
     width: 100px;
     background-color: rgb(123, 231, 123);
     font-size: 15px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: rgb(56, 230, 56);
+}
+
+.signup-button {
+    margin: 5px;
+    margin-top: 20px;
+    border-radius: 25px;
+    border: 1px solid rgb(71, 128, 162);
+    height: 40px;
+    width: 100px;
+    background-color: rgb(63, 117, 187);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.signup-button:hover {
+    background-color: rgb(18, 90, 185);
 }
 /*****End LOGIN.hbs*****/
+
+/*****DASHBOARD.hbs*****/
+.dashboard-conteiner {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+    padding: 30px;
+    width: auto;
+    height: auto;
+    border-radius: 25px;
+    border: 2px solid rgb(71, 128, 162);
+    flex-direction: column;
+    background-color: rgb(115, 133, 145);
+}
+
+.input-title{
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(71, 128, 162);
+    height: 40px;
+    width: 500px;
+    font-size: 15px;
+}
+
+.input-message {
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(71, 128, 162);
+    height: 500px;
+    width: 700px;
+    font-size: 15px;
+    resize: vertical
+}
+
+.public-button {
+    margin: 5px;
+    margin-top: 20px;
+    border-radius: 25px;
+    border: 1px solid rgb(71, 128, 162);
+    height: 50px;
+    width: 200px;
+    background-color: rgb(245, 195, 58);
+    font-size: 15px;
+    cursor: pointer;
+}
+.public-button:hover {
+    background-color: rgb(236, 175, 8);
+}
+/*****END DASHBOARD.hbs*****/

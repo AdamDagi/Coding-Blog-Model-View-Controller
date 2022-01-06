@@ -1,10 +1,9 @@
 const express = require('express');
 const { engine } = require('express-handlebars');
-const { json } = require('express/lib/response');
 const hbs = require("hbs");
-const Postcards = require('./models/Postcards');
 const app = express();
 const PORT = process.env.PORT || 3001;
+const Postcards = require('./models/Postcards');
 
 app.use(express.static(__dirname + '/assets'));
 
@@ -22,14 +21,18 @@ app.use("/login", function(request, response){
   response.render("login");
 });
 
-app.use("/", async function(request, response){
-  const data = await Postcards.findAll({});
-  //console.log(data[0]);
-  // const dataJson = response.json(data);
-  // console.log(dataJson)
-  // response.render("main", {
-  //   news: dataJson
-  // });
+app.use("/dashboard", function(request, response){
+  response.render("dashboard");
+});
+
+app.use("/", function(request, response){
+  Postcards.findAll({
+    raw: true
+  }).then(news => {
+    response.render("main", {
+      news
+    });
+  });
 });
 
 app.listen(PORT, () => console.log(`Server listening on: http://localhost:${PORT}`));
