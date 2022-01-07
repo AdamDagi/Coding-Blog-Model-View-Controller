@@ -1,13 +1,13 @@
 const User = require('./User');
 const Postcards = require('./Postcards');
-const Coments = require('./Coments');
+const Comments = require('./Comments');
 
-Postcards.hasMany(Coments, {
+Postcards.hasMany(Comments, {
   foreignKey: 'postcard_id',
 });
 
-Coments.belongsTo(Postcards, {
+Comments.belongsTo(Postcards, {
   foreignKey: 'postcard_id',
 });
 
-module.exports = { User, Postcards, Coments };
+module.exports = { User, Postcards, Comments };

@@ -1,17 +1,17 @@
-<div class="post-conteiner">
+<div class="post-conteiner" id = {{data.id}}>
     <div class="post-ikon-header">
         <div class="post-title">
-            
+            {{data.title}}
         </div>
         <div class="post-autor">
-
+            {{data.autor}}
         </div>
         <div class="post-data">
-
+            {{data.exhibition_date}}
         </div>
     </div>
     <div class="post-message">
-
+        {{data.description}}
     </div>
     <div class="post-ikon-comments">
         <section class="all-comments">
@@ -21,8 +21,8 @@
             <div class="commnet-input-container">
                 <div>
                     <div>
-                        <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
-                        <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+                        <textarea type="text" class="input comment-input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+                        <button v-on:click="addItem()" class='primaryContained float-right add-comment-button' type="submit">Add Comment</button>
                     </div>
                 </div>
             </div>
