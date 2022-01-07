@@ -32,10 +32,36 @@
     </header>
 
     <main class="content">
-        <div class="dashboard-conteiner">
-            <input class="input-title" type="text" placeholder="Title" name="psw">
-            <textarea class="input-message" type="text" placeholder="Message" name="subject"></textarea>
-            <button class="public-button" type="submit">Public</button>
+        <div class="post-conteiner">
+            <div class="post-ikon-header">
+                <div class="post-title">
+                    
+                </div>
+                <div class="post-autor">
+
+                </div>
+                <div class="post-data">
+
+                </div>
+            </div>
+            <div class="post-message">
+
+            </div>
+            <div class="post-ikon-comments">
+                <section class="all-comments">
+
+                </section>
+                <section id="app">
+                    <div class="commnet-input-container">
+                        <div>
+                            <div>
+                                <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+                                <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
     
@@ -47,7 +73,3 @@
 </body>
 
 </html>
-
-<!-- <input class="input" type="text" placeholder="Username" name="username">
-            <input class="input" type="text" placeholder="Password" name="psw">
-            <button class="button" type="submit">Login</button> -->
