@@ -7,40 +7,30 @@ const withAuth = require('../utils/auth');
 
 // GET one postcard
 // Use the custom middleware before allowing the user to access the gallery
-// router.get('/:id', async (req, res) => {
-//   try {
-//     Postcards.findOne({
-//       include: [
-//         { model: Comments }
-//       ],
-//       where: {
-//         id: req.params.id
-//       }
-//     }).then(data => {
-//       res.json(data);
-//       // res.render("post", {
-//       //   data
-//       // });
-//     });
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
-
-router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
+router.get('/post/:id', async (req, res) => {
+  try {
+    await Postcards.findOne({
+      include: [
+        { model: Comments }
+      ],
+      where: {
+        id: req.params.id
+      }
+    }).then(data => {
+      res.render("post", {
+        data
+      });
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
   }
-
-  res.render('login');
 });
 
 // GET all Postcards for homepage
 router.get('/', async (req, res) => {
   try {
-    Postcards.findAll({
+    await Postcards.findAll({
       raw: true
     }).then(news => {
       res.render("main", {
@@ -51,6 +41,15 @@ router.get('/', async (req, res) => {
     console.log(err);
     res.status(500).json(err);
   }
+});
+
+router.get('/login', (req, res) => {
+  // if (req.session.loggedIn) {
+  //   res.redirect('/');
+  //   return;
+  // }
+
+  res.render('login');
 });
 
 module.exports = router;

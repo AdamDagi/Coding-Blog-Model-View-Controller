@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
     "dotenv": "^10.0.0",
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
@@ -28,6 +29,6 @@
     "hbs": "^4.2.0",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.15",
-    "sequelize": "^7.0.0-next.1"
+    "sequelize": "^6.3.5"
   }
 }

@@ -92,28 +92,67 @@ align-items: center;
 
 .post-card-conteiner {
     display: flex;
-    /* border-radius: 25px; */
+    border-radius: 25px;
     border: 2px solid rgb(24, 41, 51);
     flex-direction: column;
     width: 95%;
     height: 300px;
     margin: 15px;
+    font-size: 20px;
 }
 
 .post-card-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-grow: 1;
+    flex-grow: 2;
+    background-color: rgb(199, 198, 197);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 .post-card-title {
-    background-color: aqua;
+    background-color: rgb(247, 198, 64);
+    border-radius: 25px;
+    border: 2px solid rgb(24, 41, 51);
+    width: 250px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-card-autor {
+    background-color: rgb(247, 198, 64);
+    border-radius: 25px;
+    border: 2px solid rgb(24, 41, 51);
+    width: 250px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-card-exhibition_date {
+    background-color: rgb(247, 198, 64);
+    border-radius: 25px;
+    border: 2px solid rgb(24, 41, 51);
+    width: 400px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .post-card-description {
-    background-color: rgb(11, 83, 44);
-    flex-grow: 9;
+    background-color: rgb(146, 145, 144);
+    flex-grow: 8;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
 }
 /*****End MAIN.hbs*****/
 

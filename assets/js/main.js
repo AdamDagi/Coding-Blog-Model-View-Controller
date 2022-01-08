@@ -4,6 +4,6 @@ cards.forEach(card => {
     const id = card.getAttribute("id");
 
     card.onclick = () => {
-        window.location.href = window.location.href + id;
+        window.location.href = window.location.href + "post/" + id;
     };
 })
