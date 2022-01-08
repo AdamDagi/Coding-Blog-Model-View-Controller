@@ -105,7 +105,7 @@ align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-grow: 2;
+    flex-grow: 1;
     background-color: rgb(199, 198, 197);
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
@@ -141,12 +141,13 @@ align-items: center;
     margin: 10px;
     display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
 }
 
 .post-card-description {
     background-color: rgb(146, 145, 144);
-    flex-grow: 8;
+    flex-grow: 9;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     display: flex;
@@ -285,33 +286,43 @@ align-items: center;
     text-align: center;
     display: flex;
     flex-direction: row;
+    font-size: 18px;
 }
 
 .post-title {
     margin: 5px;
     border-radius: 5px;
     border: 1px solid rgb(88, 158, 199);
-    background-color: rgb(174, 230, 233);
+    background-color: rgb(248, 205, 111);
     height: 60px;
     width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .post-autor {
     margin: 5px;
     border-radius: 5px;
     border: 1px solid rgb(88, 158, 199);
-    background-color: rgb(174, 230, 233);
+    background-color: rgb(248, 205, 111);
     height: 60px;
     width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .post-data {
     margin: 5px;
     border-radius: 5px;
     border: 1px solid rgb(88, 158, 199);
-    background-color: rgb(174, 230, 233);
+    background-color: rgb(248, 205, 111);
     height: 60px;
     width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /*post area*/
 .post-message {
@@ -325,6 +336,10 @@ align-items: center;
     overflow: auto;
     resize: vertical;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
 }
 /*coments area*/
 .post-ikon-comments {
@@ -344,6 +359,63 @@ align-items: center;
     height: 300px;
     width: 890px;
     overflow: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.comment-conteiner {
+    display: flex;
+    border-radius: 25px;
+    border: 2px solid rgb(24, 41, 51);
+    flex-direction: column;
+    width: 95%;
+    height: 45%;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.comment-body {
+    background-color: rgb(196, 193, 191);
+    flex-grow: 9;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    font-size: 14px;
+}
+
+.comment-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    background-color: rgb(145, 144, 143);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.comment-autor {
+    background-color: rgb(248, 205, 111);
+    border-bottom-left-radius: 25px;
+    border: 2px solid rgb(24, 41, 51);
+    width: 400px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-exh-date {
+    background-color: rgb(248, 205, 111);
+    border-bottom-right-radius: 25px;
+    border: 2px solid rgb(24, 41, 51);
+    width: 400px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .commnet-input-container {

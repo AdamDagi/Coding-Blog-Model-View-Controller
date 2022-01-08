@@ -7,9 +7,10 @@ const withAuth = require('../utils/auth');
 
 // GET one postcard
 // Use the custom middleware before allowing the user to access the gallery
-router.get('/post/:id', async (req, res) => {
+router.get('/post/:id', withAuth, async (req, res) => {
   try {
     await Postcards.findOne({
+      raw: true,
       include: [
         { model: Comments }
       ],
@@ -18,7 +19,10 @@ router.get('/post/:id', async (req, res) => {
       }
     }).then(data => {
       res.render("post", {
-        data
+        data, 
+        commentAutor: data ["Comments.autor"],
+        commentExDate: data ["Comments.exhibition_date"],
+        commentMessage: data ["Comments.message"],
       });
     });
   } catch (err) {
@@ -44,10 +48,10 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  // if (req.session.loggedIn) {
-  //   res.redirect('/');
-  //   return;
-  // }
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
 
   res.render('login');
 });
