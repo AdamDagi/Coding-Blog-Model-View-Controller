@@ -4,12 +4,11 @@ const postId = document.querySelector(".post-conteiner");
 
 addComment.onclick = async () => {
     const commentData = comment.value.trim();
-    const authorData = "author";
     const timeData = new Date();
-    const publicComRes = await fetch('/publiccomment', {
+    const publicComRes = await fetch('/api/publiccomment', {
         method: 'POST',
         body: JSON.stringify({ 
-            autor: authorData, 
+            email: window.localStorage.getItem('email'), 
             exhibition_date: timeData, 
             message: commentData,
             postcard_id: postId.getAttribute("id"),

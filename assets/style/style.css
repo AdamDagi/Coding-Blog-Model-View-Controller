@@ -214,7 +214,39 @@ align-items: center;
 /*****End LOGIN.hbs*****/
 
 /*****DASHBOARD.hbs*****/
-.dashboard-conteiner {
+.my-posts {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+    padding: 30px;
+    width: 1000px;
+    height: 900px;
+    border-radius: 25px;
+    border: 2px solid rgb(71, 128, 162);
+    flex-direction: column;
+    background-color: rgb(134, 156, 170);
+}
+
+.new-post-button-conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.new-post-conteiner {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+    padding: 30px;
+    width: auto;
+    height: auto;
+    border-radius: 25px;
+    border: 2px solid rgb(71, 128, 162);
+    flex-direction: column;
+    background-color: rgb(115, 133, 145);
+}
+.update-post-conteiner {
     display: flex;
     align-items: center;
     margin: 30px;
@@ -248,7 +280,7 @@ align-items: center;
     text-align: center;
 }
 
-.public-button {
+.public-button  {
     margin: 5px;
     margin-top: 20px;
     border-radius: 25px;
@@ -259,7 +291,40 @@ align-items: center;
     font-size: 15px;
     cursor: pointer;
 }
+
 .public-button:hover {
+    background-color: rgb(236, 175, 8);
+}
+
+.update-button {
+    margin: 5px;
+    margin-top: 20px;
+    border-radius: 25px;
+    border: 1px solid rgb(71, 128, 162);
+    height: 50px;
+    width: 200px;
+    background-color: rgb(245, 195, 58);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.update-button:hover {
+    background-color: rgb(236, 175, 8);
+}
+
+.new-post-button {
+    margin: 5px;
+    margin-top: 20px;
+    border-radius: 25px;
+    border: 1px solid rgb(71, 128, 162);
+    height: 50px;
+    width: 400px;
+    background-color: rgb(245, 195, 58);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.new-post-button:hover {
     background-color: rgb(236, 175, 8);
 }
 /*****END DASHBOARD.hbs*****/

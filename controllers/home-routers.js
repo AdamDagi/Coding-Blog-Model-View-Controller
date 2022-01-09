@@ -23,6 +23,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
         commentAutor: data ["Comments.autor"],
         commentExDate: data ["Comments.exhibition_date"],
         commentMessage: data ["Comments.message"],
+        loggedIn: req.session.loggedIn
       });
     });
   } catch (err) {
@@ -38,7 +39,8 @@ router.get('/', async (req, res) => {
       raw: true
     }).then(news => {
       res.render("main", {
-        news
+        news,
+        loggedIn: req.session.loggedIn,
       });
     });
   } catch (err) {

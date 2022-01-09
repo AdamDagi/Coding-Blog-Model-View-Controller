@@ -12,6 +12,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
+        window.localStorage.setItem('email', email);
         document.location.replace('/');
       } else {
         alert('Failed to log in.');
