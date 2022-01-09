@@ -14,7 +14,7 @@ router.post('/', async (req, res) => {
       autor: userData.username,
       exhibition_date: req.body.exhibition_date,
       message: req.body.message,
-      postcard_id: req.body.message,
+      postcard_id: req.body.postcard_id,
     });
   } catch (err) {
     console.log(err);
