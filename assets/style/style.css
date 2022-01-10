@@ -217,6 +217,7 @@ align-items: center;
 .my-posts {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 30px;
     padding: 30px;
     width: 1000px;
@@ -225,6 +226,63 @@ align-items: center;
     border: 2px solid rgb(71, 128, 162);
     flex-direction: column;
     background-color: rgb(134, 156, 170);
+    overflow: auto;
+}
+
+.my-post-conteiner-each {
+    display: flex;
+    border-radius: 25px;
+    border: 2px solid rgb(24, 41, 51);
+    flex-direction: column;
+    width: 98%;
+    height: 130px;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-post-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(145, 144, 143);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 100%;
+    height: 30%;
+}
+
+.my-post-title {
+    background-color: rgb(248, 205, 111);
+    border-top-left-radius: 25px;
+    border: 2px solid rgb(24, 41, 51);
+    width: 45%;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-post-date {
+    background-color: rgb(248, 205, 111);
+    border-top-right-radius: 25px;
+    border: 2px solid rgb(24, 41, 51);
+    width: 45%;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-post-message {
+    background-color: rgb(196, 193, 191);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    width: 100%;
+    height: 70%;
 }
 
 .new-post-button-conteiner {
