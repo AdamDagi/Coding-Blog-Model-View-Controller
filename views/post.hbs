@@ -15,19 +15,21 @@
     </div>
     <div class="post-ikon-comments">
         <section class="all-comments">
-            <div class="comment-conteiner">
-                <div class="comment-body">
-                    {{commentMessage}}
-                </div>
-                <div class="comment-footer">
-                    <div class="comment-autor">
-                        {{commentAutor}}
+            {{#each comments}}
+                <div class="comment-conteiner">
+                    <div class="comment-body">
+                        {{message}}
                     </div>
-                    <div class="comment-exh-date">
-                        {{commentExDate}}
+                    <div class="comment-footer">
+                        <div class="comment-autor">
+                            {{autor}}
+                        </div>
+                        <div class="comment-exh-date">
+                            {{exhibition_date}}
+                        </div>
                     </div>
                 </div>
-            </div>
+            {{/each}}
         </section>
         <section id="app">
             <div class="commnet-input-container">
@@ -41,5 +43,3 @@
         </section>
     </div>
 </div>
-
-<script src="./js/post.js"></script>

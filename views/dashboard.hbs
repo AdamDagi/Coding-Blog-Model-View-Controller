@@ -1,10 +1,17 @@
 <div class="dashboard-conteiner">
     <div class="my-posts">
-
+        {{#each myPosts}}
+            <div class="my-post-conteiner-each">
+                <div class="my-post-title">
+                    {{title}}
+                </div>
+                <div class="my-post-message">
+                    {{description}}
+                </div>
+            </div>
+        {{/each}}
     </div>
     <div class="new-post-button-conteiner">
         <button class="new-post-button" type="submit">New Post</button>
     </div>
 </div>
-
-<script src="./js/dashboard.js"></script>

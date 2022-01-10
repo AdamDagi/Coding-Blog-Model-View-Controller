@@ -3,7 +3,7 @@ const loginFormHandler = async (event) => {
   
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
-  
+
     if (email && password) {
       const response = await fetch('/api/users/login', {
         method: 'POST',
@@ -35,6 +35,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
+        window.localStorage.setItem('email', email);
         document.location.replace('/');
       } else {
         alert('Failed to sign up.');

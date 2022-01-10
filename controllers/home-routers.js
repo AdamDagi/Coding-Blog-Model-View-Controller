@@ -9,7 +9,13 @@ const withAuth = require('../utils/auth');
 // Use the custom middleware before allowing the user to access the gallery
 router.get('/post/:id', withAuth, async (req, res) => {
   try {
-    await Postcards.findOne({
+    const eachComment = await Comments.findAll({
+      raw: true,
+      where: {
+        postcard_id: req.params.id
+      }
+    });
+    const postik = await Postcards.findOne({
       raw: true,
       include: [
         { model: Comments }
@@ -20,9 +26,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
     }).then(data => {
       res.render("post", {
         data, 
-        commentAutor: data ["Comments.autor"],
-        commentExDate: data ["Comments.exhibition_date"],
-        commentMessage: data ["Comments.message"],
+        comments: eachComment || [],
         loggedIn: req.session.loggedIn
       });
     });
