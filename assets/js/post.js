@@ -15,4 +15,5 @@ addComment.onclick = async () => {
         }),
         headers: { 'Content-Type': 'application/json' },
     });
-}
+    location.href=location.href;
+};

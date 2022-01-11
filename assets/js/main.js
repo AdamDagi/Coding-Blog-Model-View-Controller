@@ -6,4 +6,4 @@ cards.forEach(card => {
     card.onclick = () => {
         window.location.href = window.location.href + "post/" + id;
     };
-})
+});

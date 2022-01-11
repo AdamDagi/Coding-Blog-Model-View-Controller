@@ -16,6 +16,7 @@ router.post('/', async (req, res) => {
       message: req.body.message,
       postcard_id: req.body.postcard_id,
     });
+    res.status(200).json("ok");
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

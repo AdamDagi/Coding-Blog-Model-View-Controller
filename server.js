@@ -15,6 +15,9 @@ const sess = {
   secret: 'Super secret secret',
   store: myStore,
   resave: false,
+  cookie: {
+    expires: 1 * 1000
+  },
 };
 myStore.sync();
 
