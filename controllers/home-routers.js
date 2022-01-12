@@ -7,7 +7,7 @@ const withAuth = require('../utils/auth');
 
 // GET one postcard
 // Use the custom middleware before allowing the user to access the gallery
-router.get('/post/:id', withAuth, async (req, res) => {
+router.get('/post/:id', async (req, res) => {
   try {
     const eachComment = await Comments.findAll({
       raw: true,

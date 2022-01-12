@@ -24,6 +24,12 @@
                         <div class="comment-autor">
                             {{autor}}
                         </div>
+                        <div class="delite-comment-conteiner">
+                            <button class="delite-comment-button" type="delite"id={{id}}>delite</button>
+                        </div>
+                        <div class="update-comment-conteiner">
+                            <button class="update-comment-button" type="update"id={{id}}>Update</button>
+                        </div>
                         <div class="comment-exh-date">
                             {{exhibition_date}}
                         </div>
@@ -34,10 +40,13 @@
         <section id="app">
             <div class="commnet-input-container">
                 <div>
-                    <div>
-                        <textarea type="text" class="input comment-input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
-                        <button class='primaryContained float-right add-comment-button' type="submit">Add Comment</button>
-                    </div>
+                    <textarea type="text" class="input comment-input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+                    {{#if loggedIn}}
+                    <button class='primaryContained float-right add-comment-button'>Add Comment</button>
+                    <button class='primaryContained float-right up-com-button' style="display: none;">Update Comment</button>
+                    {{else}}
+                    <a class='primaryContained float-right' href="/login">Add Comment</a>
+                    {{/if}}
                 </div>
             </div>
         </section>

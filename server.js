@@ -14,9 +14,9 @@ const myStore = new SequelizeStore({
 const sess = {
   secret: 'Super secret secret',
   store: myStore,
-  resave: false,
+  resave: true,
   cookie: {
-    expires: 1 * 1000
+    expires: 60000
   },
 };
 myStore.sync();

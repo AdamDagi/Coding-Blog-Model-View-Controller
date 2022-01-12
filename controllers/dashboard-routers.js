@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Postcards, User } = require('../models');
+const async = require('hbs/lib/async');
+const { Postcards, User, Comments } = require('../models');
 const withAuth = require('../utils/auth');
 
 // GET Dashboard
@@ -87,6 +88,23 @@ router.post('/:email/:id/update', withAuth, async (req, res) => {
 
 router.delete('/:email/:id/delete', withAuth, async (req, res) => {
   try {
+    const comments = await Comments.findAll({
+      raw:true,
+      where: {
+        postcard_id: req.params.id,
+      }
+    });
+    if(comments && comments.length > 0) {
+      comments.forEach(async(item) => {
+        await Comments.destroy(
+          {
+            where: {
+              id: item.id,
+            }
+          }
+        )
+      })
+    }
     await Postcards.destroy(
       {
         where: {

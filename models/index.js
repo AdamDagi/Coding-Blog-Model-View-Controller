@@ -4,6 +4,7 @@ const Comments = require('./Comments');
 
 Postcards.hasMany(Comments, {
   foreignKey: 'postcard_id',
+  onDelete: 'cascade',
 });
 
 Comments.belongsTo(Postcards, {
