@@ -8,8 +8,7 @@
     "start": "node server.js",
     "watch": "nodemon server.js",
     "seed": "node seeds/index.js",
-    "heroku-postinstall": "npm run seed",
-    "postdeploy": "npm run seed"
+    "heroku-postbuild": "npm run seed"
   },
   "repository": {
     "type": "git"
