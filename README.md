@@ -64,6 +64,6 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 
 <img width="1146" alt="Screen Shot 2022-01-12 at 8 44 07 PM" src="https://user-images.githubusercontent.com/90221273/149251181-f29d35df-c90b-40c7-944e-49c8d8b3f30d.png">
 
-Apdate / Delete Post Page:
+Update / Delete Post Page:
 
 <img width="1147" alt="Screen Shot 2022-01-12 at 8 44 38 PM" src="https://user-images.githubusercontent.com/90221273/149251283-96e2a710-6aee-4b68-b3d0-684f1cb278cd.png">
